@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Döviz{% endblock title %}
+
+{% block body %}
+    <div>
+        <h1>En Uygun Döviz Kurları</h1>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Firma</th>
+                <th>Döviz Cinsi</th>
+                <th>Miktar</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ usd_firma }}</td>
+                    <td> USD </td>
+                    <td> {{ usd }} </td>
+                </tr>
+                <tr>
+                    <td>{{ euro_firma }}</td>
+                    <td> EURO </td>
+                    <td> {{ euro }} </td>
+                </tr>
+                <tr>
+                    <td>{{ str_firma }}</td>
+                    <td> STERLIN </td>
+                    <td> {{ str }} </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+{% endblock %}

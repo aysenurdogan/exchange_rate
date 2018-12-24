@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hoşgeldiniz{% endblock title %}
+
+{% block body %}
+    <div >
+        <h1>En Uygun Uygulama Koşulları: </h1>
+        <p class="lead">Framework olarak Symfony 4.0 tercih edilmeli.
+
+            2 ayrı kur bilgisi veren API'lerden (aşağıda mock server yanıtlarını bulabilirsin) EUR/USD/GBP kur bilgilerini alarak karşılaştırıp daha ucuz olanını ekrana basacak bir web uygulama geliştirilecek.
+
+            Burada kur bilgisi veren şirketler Adapter Patterni ile geliştirilecek ki 3. bir kur bilgisi veren API'nin (provider 3) de eklemesi  sadece API tanıtımı ile oluşsun. Uygulamanın başka yerinde herhangi bir değişikliğe ihtiyaç duymadan bu 3 kur bilgisi veren API'den en ucuzunu ana sayfada göstersin.
+
+            Bu verileri APIlerden çekmek için command (console) yazılacak ve veritabanına kaydedecek. Anasayfada veritabanından okuyarak verileri gösterecek. İhtiyaç halinde önyüzde Bootstrap ve Jquery kullanılabilir.
+
+            Backend servisinde Facade, Proxy, Strategy veya Adapter gibi patternleri ile geliştirme yapılması tercih edilir.
+
+           </p>
+        <h6> Provider 1</h6>
+        <a href="http://www.mocky.io/v2/5a74519d2d0000430bfe0fa0" class="btn btn-dark">Json Data</a>
+        <h6> Provider 2</h6>
+        <a href="http://www.mocky.io/v2/5a74524e2d0000430bfe0fa3" class="btn btn-dark">Json Data</a>
+    </div>
+    <div>
+        <h6> </h6>
+        <a href="/welcome" class="btn btn-info">En uygun döviz kuru için tıklayınız</a>
+    </div>
+{% endblock %}

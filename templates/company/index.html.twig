@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title%} Firmalar {% endblock %}
+
+{% block body %}
+    {%  if companies %}
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Firma Adı</th>
+          <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {%  for company in companies %}
+          <tr>
+            <td>{{ company.title }}</td>
+            <td>
+              <a href="/company/{{ company.id }}" class="btn btn-dark">Show</a>
+            </td>
+            <td>
+              <a href="/company/update/{{ company.id }}" class="btn btn-info">Update</a>
+            </td>
+            <td>
+              <a href="/company/delete/{{ company.id }}" class="btn btn-danger">Delete</a>
+            </td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>Firma yok</p>
+    {% endif %}
+
+{% endblock %}

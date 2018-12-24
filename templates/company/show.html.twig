@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title%} {{ company.title }} {% endblock %}
+
+{% block body %}
+  <h1>{{ company.title }}</h1>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>USD</th>
+      <th>EURO</th>
+      <th>STERLIN</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ company.usd }}</td>
+        <td>{{ company.euro }}</td>
+        <td>{{ company.str }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <a href="/company" class="btn btn-light">Go Back</a>
+{% endblock %}
